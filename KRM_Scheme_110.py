@@ -150,9 +150,11 @@ l20 = pp.create_line_from_parameters(net, from_bus = b66, to_bus = b67, length_k
 l21 = pp.create_line_from_parameters(net, from_bus = b66, to_bus = b67, length_km = 25,
  r_ohm_per_km = 0.249, x_ohm_per_km = 0.427, max_i_ka = 0.086, c_nf_per_km = 0)
 
-#Запуск потока мощности
-pp.runpp(net)
+pp.diagnostic(net)
 
-print(net.res_line)
-print(net.res_bus)
-print(net.res_trafo)
+#Запуск потока мощности
+#pp.runpp(net)
+
+#print(net.res_line)
+#print(net.res_bus)
+#print(net.res_trafo)
